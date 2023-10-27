@@ -118,6 +118,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# STATICFILES_DIRS and STATIC_ROOT - to recognize the css and js at static folder, it will create assets directory also
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
